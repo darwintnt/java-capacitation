@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="capacitation:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/capacitation_jar</output-path>
+    <root id="archive" name="capacitation.jar">
+      <element id="module-output" name="capacitation" />
+    </root>
+  </artifact>
+</component>
