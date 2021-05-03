@@ -1,4 +1,6 @@
 public class Patient {
+
+    private static int id;
     private String name;
     private String email;
     private String address;
@@ -19,6 +21,10 @@ public class Patient {
     }
 
     public String getEmail() {
-        return email;
+        return email.toLowerCase().trim();
+    }
+
+    public String getName() {
+        return name;
     }
 }
