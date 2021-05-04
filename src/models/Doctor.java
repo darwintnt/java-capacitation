@@ -1,39 +1,40 @@
+package models;
+
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
+public class Doctor extends User {
 
-    String firstName;
-    String speciality;
-    int age;
+    private int age;
+    private String speciality;
 
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
     /**
-     * Description: Init new Doctor.
-     * @param firstName Name
+     * Description: Init new models.Doctor.
      * @param speciality Speciality
+     * @param age Age
      */
-    public Doctor(String firstName, String speciality, int age) {
-        this.firstName = firstName;
+    public Doctor(String name, String email, String speciality, int age) {
+        super(name, email);
         this.speciality = speciality;
         this.age = age;
-    }
-
-    /**
-     * Description: Return the doctor name;
-     * @return name
-     */
-    public String getName() {
-        return "Nombre: " + firstName;
     }
 
     public String getSpeciality() {
         return "Especialidad: " + speciality;
     }
 
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
+
     public String getAge() {
         return "Edad: " + age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public void addAvailableAppointment(Date data, String time) {
@@ -42,6 +43,16 @@ public class Doctor {
 
     public ArrayList<AvailableAppointment> getAvailableAppointments() {
         return availableAppointments;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpeciality: "+ speciality + "\nAge: " + age + "\nAvailable: " + availableAppointments.toString();
+    }
+
+    @Override
+    public String showDataUser() {
+        return "Hospital General\n" + "Departamento de Cancerologia\n" + "Doctor: " + getName();
     }
 
     public static class AvailableAppointment {
@@ -77,6 +88,11 @@ public class Doctor {
 
         public void setTime(String time) {
             this.time = time;
+        }
+
+        @Override
+        public String toString() {
+            return "\n========= AvailableAppointment ========== \nDate: " + date + "\nTime: " + time;
         }
     }
 

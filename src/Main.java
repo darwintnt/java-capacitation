@@ -1,17 +1,19 @@
+import models.Doctor;
+import models.Nurse;
+import models.Patient;
+import models.User;
+
 import java.util.Date;
 
-import static ui.UIMenu.showMenu;
-
-import static utils.Operation.*;
-
 import static java.lang.System.out;
+import static ui.UIMenu.showMenu;
 
 public class Main {
 
     public static void main(String[] args) {
-
-//        showMenu();
-        Doctor doctor = new Doctor("Jose Andres", "Cirujano", 39);
+        showMenu();
+        /*Doctor doctor = new Doctor("Jose Andres", "joseandreas@gmail.com", "Cirujano", 39);
+        Nurse nurse = new Nurse("Luna Lunera", "lunalunera@hotmail.com");
 
         doctor.addAvailableAppointment(new Date(), "6pm");
         doctor.addAvailableAppointment(new Date(), "10am");
@@ -24,16 +26,16 @@ public class Main {
         out.println("Nombre Doctor: " + doctor.getName());
         out.println(doctor.getSpeciality());
         out.println(doctor.getAge());
-//        out.println(doctor.getAvailableAppointments());
         out.println("======================================");
-
-
+        out.println(doctor.showDataUser());
+        out.println("======================================");
         Patient patient = new Patient("Luis Suarez", "luisuarez@gmail.com");
-        out.println("Nombre Paciente: " + patient.getName());
-        out.println("Email Paciente: " + patient.getEmail());
+        out.println(patient);
+        out.println("======================================");
+        out.println(patient.showDataUser());
+        out.println("======================================");
+        out.println(nurse.showDataUser());*/
 
-
-        double circleArea = getCircleArea(5);
-        out.println("Área del circulo: " + circleArea);
     }
-}
+
+ }
