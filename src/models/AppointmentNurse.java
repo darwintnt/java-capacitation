@@ -53,7 +53,8 @@ public class AppointmentNurse implements ISchedulable {
     }
 
     @Override
-    public String schedule(Date date, String time) {
-        return "Nurse Schedule OK";
+    public void schedule(Date date, String time) {
+        this.date = date;
+        this.time = time;
     }
 }

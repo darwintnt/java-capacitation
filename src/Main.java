@@ -35,7 +35,6 @@ public class Main {
         out.println(patient.showDataUser());
         out.println("======================================");
         out.println(nurse.showDataUser());*/
-
     }
 
  }
